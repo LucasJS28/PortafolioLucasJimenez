@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de menú (solo visible en dispositivos móviles) */
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+/* Estilo general de las secciones */
+section {
+    height: 100vh; /* Cada sección ocupará el 100% del alto de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.6s ease-in-out; /* Transición suave */
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Ocultamos el menú en pantallas pequeñas */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex; /* Mostramos el menú cuando se activa */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón de menú en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículo Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <!-- Navegación (Nav) -->
+    <nav>
+        <button class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- Icono de hamburguesa -->
+        </button>
+        <ul id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#estudios">Estudios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section data-aos="fade-up" id="inicio">
+        <div class="container">
+            <h1>Bienvenido a mi Currículo Web</h1>
+            <p>Hola, soy Lucas Jiménez, Ingeniero Informático en formación. Aquí podrás conocer más sobre mi experiencia
+                y proyectos.</p>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section data-aos="fade-up" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Soy un apasionado por la informática, especializado en desarrollo de software, redes y análisis de datos.
+                Actualmente estudio Ingeniería Informática en la Universidad Santo Tomás.</p>
+        </div>
+    </section>
+
+    <!-- Sección Estudios -->
+    <section data-aos="fade-up" id="estudios">
+        <div class="container">
+            <h2>Estudios</h2>
+            <ul>
+                <li><strong>Ingeniería Informática</strong> - Universidad Santo Tomás (2023 - Actualidad)</li>
+                <li><strong>Diplomado en Redes y Seguridad</strong> - Universidad Técnica (2022)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section data-aos="fade-up" id="proyectos">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>StudyTime: Tu Horario Personalizado</h3>
+                <p>Aplicación para organizar horarios académicos con funcionalidades como recordatorios y flashcards.
+                </p>
+                <a href="https://github.com/tu-repo" target="_blank">Ver en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>EcoMap UST</h3>
+                <p>Mapa interactivo de la Universidad Santo Tomás con funcionalidades de búsqueda y navegación por
+                    pisos.</p>
+                <a href="https://github.com/tu-repo" target="_blank">Ver en GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section data-aos="fade-up" id="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Desarrollo Frontend (React, HTML, CSS)</li>
+                <li>Desarrollo Backend (Node.js, Express)</li>
+                <li>Programación en Python y Java</li>
+                <li>Redes (Cisco Packet Tracer, Nmap, Nessus)</li>
+                <li>Base de datos (MySQL, Firebase)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section data-aos="fade-up" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través de los siguientes medios:</p>
+            <ul>
+                <li>Email: lucasjimenez@correo.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/lucasjimenez" target="_blank">LinkedIn</a></li>
+                <li>GitHub: <a href="https://github.com/tu-repo" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</body>
+<script>
+    AOS.init();
+
+    // JavaScript para mostrar/ocultar el menú en dispositivos móviles
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    // Mostrar/ocultar el menú cuando el botón de hamburguesa sea presionado
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+
+</html>
