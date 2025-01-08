@@ -90,14 +90,18 @@ a {
         width: 100%;
         text-align: center;
         padding: 10px 0;
+        border-top: 1px solid white;
         
     }
 
-    nav ul li{
+    nav ul li:first-child{ 
+        padding-bottom: 10px;
         
     }
     nav ul li:not(:first-child){
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid white;
     }
     nav ul.active {
         display: flex; /* Mostramos el menú cuando se activa */
