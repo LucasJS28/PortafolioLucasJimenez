@@ -124,6 +124,8 @@ a {
     background-color: #2874a6;
 }
 
+
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
     nav{
@@ -164,3 +166,5 @@ a {
         height: 150px; /* Reducimos la altura del video */
     }
 }
+
+
