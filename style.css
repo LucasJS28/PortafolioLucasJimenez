@@ -172,28 +172,30 @@ a:hover {
     color: #2874a6;
 }
 /* Nombre */
-
 #titulo{
     display: block;
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 23ch;
-    animation: typing 2s steps(12),blink .5s infinite step-end alternate;
+    width: 24ch;
+    animation: typing 4s steps(20) 1s forwards, blink .5s infinite step-end alternate;
     overflow: hidden;
     text-align: center;
     margin: 0 auto;
     font-size: 25px;
     margin-bottom: 20px;
+    animation-delay: 1s; /* Después de 5 segundos, se reinicia */
 }
 
 @keyframes typing{
     from{width: 0;}
+    to{width: 24ch;} /* La animación escribe el texto completo */
 }
 
 @keyframes blink{
-    50% {border-color: tra;}
+    50% {border-color: transparent;} /* Parpadeo del cursor */
 }
+
 @media screen and (max-width: 768px) {
     nav{
         padding: 0 0;
