@@ -171,7 +171,29 @@ a {
 a:hover {
     color: #2874a6;
 }
+/* Nombre */
 
+#titulo{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 23ch;
+    animation: typing 2s steps(12),blink .5s infinite step-end alternate;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+@keyframes typing{
+    from{width: 0;}
+}
+
+@keyframes blink{
+    50% {border-color: tra;}
+}
 @media screen and (max-width: 768px) {
     nav{
         padding: 0 0;
