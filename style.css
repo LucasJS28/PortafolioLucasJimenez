@@ -172,27 +172,42 @@ a:hover {
     color: #2874a6;
 }
 
-/* Responsivo */
 @media screen and (max-width: 768px) {
+    nav{
+        padding: 0 0;
+    }
     nav ul {
-        display: none;
+        display: none; /* Ocultamos el menú en pantallas pequeñas */
         flex-direction: column;
+        width: 100%;
         text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid white;
+        
+    }
+
+    nav ul li:first-child{ 
+        padding-bottom: 10px;
+        
+    }
+    nav ul li:not(:first-child){
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid white;
+    }
+    nav ul.active {
+        display: flex; /* Mostramos el menú cuando se activa */
     }
 
     .menu-toggle {
-        display: block;
-    }
-
-    section {
-        padding: 80px 20px;
+        display: block; /* Mostramos el botón de menú en pantallas pequeñas */
     }
 
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
     }
 
     .project-card iframe {
-        height: 150px;
+        height: 150px; /* Reducimos la altura del video */
     }
 }
