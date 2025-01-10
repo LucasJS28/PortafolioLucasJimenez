@@ -196,46 +196,6 @@ a:hover {
     50% {border-color: transparent;} /* Parpadeo del cursor */
 }
 
-@media screen and (max-width: 768px) {
-    nav{
-        padding: 0 0;
-    }
-    nav ul {
-        display: none; /* Ocultamos el menú en pantallas pequeñas */
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        border-top: 1px solid white;
-        
-    }
-
-    nav ul li:first-child{ 
-        padding-bottom: 10px;
-        
-    }
-    nav ul li:not(:first-child){
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-top: 1px solid white;
-    }
-    nav ul.active {
-        display: flex; /* Mostramos el menú cuando se activa */
-    }
-
-    .menu-toggle {
-        display: block; /* Mostramos el botón de menú en pantallas pequeñas */
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-    }
-
-    .project-card iframe {
-        height: 150px; /* Reducimos la altura del video */
-    }
-}
-
 
 /* Estilos para las tarjetas de certificados */
 .certificado-grid {
@@ -334,7 +294,46 @@ a:hover {
     background-color: #2874a6;
 }
 
+
 @media screen and (max-width: 768px) {
+    nav{
+        padding: 0 0;
+    }
+    nav ul {
+        display: none; /* Ocultamos el menú en pantallas pequeñas */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid white;
+        
+    }
+
+    nav ul li:first-child{ 
+        padding-bottom: 10px;
+        
+    }
+    nav ul li:not(:first-child){
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid white;
+    }
+    nav ul.active {
+        display: flex; /* Mostramos el menú cuando se activa */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón de menú en pantallas pequeñas */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .project-card iframe {
+        height: 150px; /* Reducimos la altura del video */
+    }
+    
     .certificado-grid {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }

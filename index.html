@@ -228,15 +228,6 @@
             });
         });
 
-
-        // Activar o desactivar el menú en pantallas pequeñas
-        //const mobileMenu = document.getElementById("mobile-menu");
-
-        // mobileMenu.addEventListener("click", () => {
-        //   navLinks.classList.toggle("active");
-        //});
-
-
         // Función para mostrar y ocultar los certificados al presionar el botón "Ver más" / "Ver menos"
         document.getElementById('verMas').addEventListener('click', function () {
             const certificadosOcultos = document.querySelectorAll('.certificado.oculto');
@@ -253,7 +244,12 @@
             this.textContent = isHidden ? 'Ver menos' : 'Ver más';
         });
 
+        // Activar o desactivar el menú en pantallas pequeñas
+        //const mobileMenu = document.getElementById("mobile-menu");
 
+        // mobileMenu.addEventListener("click", () => {
+        //   navLinks.classList.toggle("active");
+        //});
 
 
     </script>
