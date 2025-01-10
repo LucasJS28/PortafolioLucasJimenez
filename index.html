@@ -29,15 +29,6 @@
     <section data-aos="fade-up" id="inicio">
         <div class="container">
             <h1 id="titulo">Lucas Jiménez Sepúlveda</h1>
-            <p>Portafolio Web</p>
-        </div>
-    </section>
-
-
-    <!-- Sección Sobre mí -->
-    <section data-aos="fade-up" id="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí</h2>
             <p>
                 ¡Hola! Soy Lucas, un futuro Ingeniero en Informática apasionado por la programación y el aprendizaje
                 tecnológico. Mi objetivo es especializarme en áreas como la ingeniería forense informática y
@@ -46,16 +37,86 @@
         </div>
     </section>
 
+
+    <!-- Sección Sobre mí -->
+    <section data-aos="fade-up" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Soy un apasionado por la informática, especializado en desarrollo de software, redes y análisis de datos.
+                Actualmente estudio Ingeniería Informática en la Universidad Santo Tomás.</p>
+        </div>
+    </section>
+
     <!-- Sección Estudios -->
     <section data-aos="fade-up" id="estudios">
         <div class="container">
             <h2>Estudios</h2>
-            <ul>
-                <li><strong>Ingeniería Informática</strong> - Universidad Santo Tomás (2023 - Actualidad)</li>
-                <li><strong>Diplomado en Redes y Seguridad</strong> - Universidad Técnica (2022)</li>
-            </ul>
+            <div class="certificados-container">
+                <!-- Certificados visibles inicialmente -->
+                <div class="certificado">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de Auditoría a la Ciberseguridad</strong> - Octubre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado">
+                    <img src="logo_certiprof.png" alt="Logotipo de CertiProf">
+                    <p><strong>Cybersecurity Awareness - CAPC</strong> - Octubre 2024</p>
+                    <p>Expedición: Oct. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de Gobernanza de la Ciberseguridad</strong> - Octubre 2024</p>
+                    <p>Expedición: Oct. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de SGSI</strong> - Octubre 2024</p>
+                    <p>Expedición: Oct. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+
+                <!-- Certificados ocultos inicialmente -->
+                <div class="certificado oculto">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de Ciberseguridad</strong> - Octubre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado oculto">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de Criptografía</strong> - Octubre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado oculto">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Introducción al Pentesting</strong> - Noviembre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado oculto">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Fundamentos de Seguridad en la Nube</strong> - Noviembre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+                <div class="certificado oculto">
+                    <img src="logo_usach.png" alt="Logotipo de Capacitación Usach">
+                    <p><strong>Gestión de Riesgos en Ciberseguridad</strong> - Noviembre 2024</p>
+                    <p>Expedición: Nov. 2024</p>
+                    <a href="#">Mostrar credencial</a>
+                </div>
+
+            </div>
+
+            <button id="verMas" class="ver-mas">Ver más</button>
         </div>
     </section>
+
+
 
     <!-- Sección Proyectos -->
     <section data-aos="fade-up" id="proyectos">
@@ -164,18 +225,34 @@
                         behavior: 'smooth', // Desplazamiento suave
                     });
                 }
-
-                navLinks.classList.remove('active');
             });
         });
 
 
         // Activar o desactivar el menú en pantallas pequeñas
-        const mobileMenu = document.getElementById("mobile-menu");
+        //const mobileMenu = document.getElementById("mobile-menu");
 
-        mobileMenu.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
+        // mobileMenu.addEventListener("click", () => {
+        //   navLinks.classList.toggle("active");
+        //});
+
+
+        // Función para mostrar y ocultar los certificados al presionar el botón "Ver más" / "Ver menos"
+        document.getElementById('verMas').addEventListener('click', function () {
+            const certificadosOcultos = document.querySelectorAll('.certificado.oculto');
+
+            // Verifica si los certificados están ocultos o visibles
+            const isHidden = certificadosOcultos[0].style.display === 'none';
+
+            // Mostrar u ocultar los certificados dependiendo del estado actual
+            certificadosOcultos.forEach(certificado => {
+                certificado.style.display = isHidden ? 'block' : 'none';
+            });
+
+            // Cambiar el texto del botón a "Ver más" o "Ver menos"
+            this.textContent = isHidden ? 'Ver menos' : 'Ver más';
         });
+
 
 
 
